@@ -138,8 +138,7 @@ if page == "Peminjaman":
                         "items": requested,
                         "tujuan": tujuan,
                         "waktu_pinjam": now_str(),
-                        "status": "dipinjam", 
-                    }
+                        "status": "dipinjam",}
                     # kurangi stok
                     for alat, q in requested.items():
                         st.session_state.inventory[alat]["available"] -= q
