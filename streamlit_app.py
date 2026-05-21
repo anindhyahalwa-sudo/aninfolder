@@ -90,8 +90,7 @@ if page == "Dashboard":
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("Stok Alat (tersedia / total)")
-        inv_table = pd.DataFrame([
-            {"alat": k, "available": v["available"], "total": v["total"]}
+        inv_table = pd.DataFrame([{"alat": k, "available": v["available"], "total": v["total"]}
             for k,v in st.session_state.inventory.items()
         ])
         st.table(inv_table.set_index("alat")) 
